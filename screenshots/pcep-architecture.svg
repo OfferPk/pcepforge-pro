@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPcep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060814"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="pceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="620" fill="url(#bgPcep)"/>
+
+  <!-- Title -->
+  <text x="550" y="40" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="20" font-weight="bold">Stateful PCE &amp; Segment Routing Traffic Engineering (SR-TE) Architecture</text>
+  <text x="550" y="65" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">RFC 5440 / RFC 8231 / RFC 8664 Centralized Optimization &amp; SRLG Disjoint Multi-Path Steering</text>
+
+  <!-- Centralized Stateful PCE Controller Cluster -->
+  <rect x="350" y="95" width="400" height="110" rx="10" fill="url(#pceGrad)" stroke="#818cf8" stroke-width="2"/>
+  <text x="550" y="125" text-anchor="middle" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="16" font-weight="bold">Centralized Stateful PCE Controller (HA Cluster)</text>
+  <rect x="375" y="140" width="165" height="45" rx="6" fill="#080d22" stroke="#6366f1" stroke-width="1"/>
+  <text x="457" y="160" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="11" font-weight="bold">Primary PCE-01</text>
+  <text x="457" y="175" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">198.51.100.10 (Active)</text>
+
+  <rect x="560" y="140" width="165" height="45" rx="6" fill="#080d22" stroke="#6366f1" stroke-width="1"/>
+  <text x="642" y="160" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="11" font-weight="bold">Standby PCE-02</text>
+  <text x="642" y="175" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">198.51.100.11 (Backup)</text>
+
+  <!-- PCEP Control Channels -->
+  <!-- Left PCEP Session -->
+  <path d="M 420 205 L 180 300" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="6 3"/>
+  <rect x="220" y="240" width="160" height="26" rx="4" fill="#070b1c" stroke="#06b6d4" stroke-width="1"/>
+  <text x="300" y="257" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="10">PCEP TLS (TCP 4189)</text>
+
+  <!-- Right PCEP Session -->
+  <path d="M 680 205 L 920 300" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="6 3"/>
+  <rect x="720" y="240" width="160" height="26" rx="4" fill="#070b1c" stroke="#06b6d4" stroke-width="1"/>
+  <text x="800" y="257" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="10">PCEP TLS (TCP 4189)</text>
+
+  <!-- Ingress PCC (NYC-CR-01) -->
+  <rect x="70" y="300" width="220" height="110" rx="8" fill="url(#nodeGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="330" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">Ingress PCC Router</text>
+  <text x="180" y="350" text-anchor="middle" fill="#f1f5f9" font-family="monospace" font-size="12">NYC-CR-01</text>
+  <text x="180" y="370" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11">198.51.100.1</text>
+  <text x="180" y="392" text-anchor="middle" fill="#10b981" font-family="-apple-system, sans-serif" font-size="11">D-bit=1 (Delegated)</text>
+
+  <!-- Egress PCC (LON-CR-02) -->
+  <rect x="810" y="300" width="220" height="110" rx="8" fill="url(#nodeGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="920" y="330" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">Egress PCC Router</text>
+  <text x="920" y="350" text-anchor="middle" fill="#f1f5f9" font-family="monospace" font-size="12">LON-CR-02</text>
+  <text x="920" y="370" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11">198.51.100.2</text>
+  <text x="920" y="392" text-anchor="middle" fill="#10b981" font-family="-apple-system, sans-serif" font-size="11">C-bit=1 (PCE-Created)</text>
+
+  <!-- Paths -->
+  <!-- Primary Path: Top Blue Line -->
+  <path d="M 290 330 C 450 280, 650 280, 810 330" fill="none" stroke="#10b981" stroke-width="3.5"/>
+  <rect x="440" y="275" width="220" height="32" rx="4" fill="#070b1c" stroke="#10b981" stroke-width="1"/>
+  <text x="550" y="295" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="11" font-weight="bold">Primary Path: SRLG Conduit 101 (5.88ms)</text>
+
+  <!-- Secondary Disjoint Path: Bottom Amber Line -->
+  <path d="M 290 380 C 450 450, 650 450, 810 380" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="8 4"/>
+  <rect x="430" y="420" width="240" height="32" rx="4" fill="#070b1c" stroke="#f59e0b" stroke-width="1"/>
+  <text x="550" y="440" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="bold">Secondary Disjoint: SRLG Conduit 202 (7.11ms)</text>
+
+  <!-- Explanatory Box at bottom -->
+  <rect x="70" y="480" width="960" height="110" rx="8" fill="#080d22" stroke="#1c274c" stroke-width="1"/>
+  <text x="90" y="505" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold">Zero-Trust PCEP &amp; Diversity Guarantees:</text>
+  
+  <text x="90" y="530" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="11">
+    • <tspan fill="#34d399" font-weight="bold">Disjoint Association (RFC 8800):</tspan> Controller computes strict zero-overlap paths. A fiber cut in conduit 101 leaves secondary conduit 202 intact.
+  </text>
+  <text x="90" y="552" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="11">
+    • <tspan fill="#38bdf8" font-weight="bold">Fail-Closed Local TI-LFA:</tspan> If PCE communication is severed, PCC retains active LSPs and falls back to local fast-reroute without blackholing.
+  </text>
+  <text x="90" y="574" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="11">
+    • <tspan fill="#fbbf24" font-weight="bold">Incremental State Sync (RFC 8232):</tspan> Incremental DB-versioning prevents control plane CPU floods during mass core link reconnects.
+  </text>
+</svg>

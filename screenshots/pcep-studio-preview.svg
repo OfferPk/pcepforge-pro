@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060814"/>
+      <stop offset="100%" stop-color="#0b1126"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1430"/>
+      <stop offset="100%" stop-color="#070b1c"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#bgGrad)"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="25" width="1140" height="60" rx="8" fill="#080d22" stroke="#1c274c" stroke-width="1.5"/>
+  <circle cx="60" cy="55" r="6" fill="#ef4444"/>
+  <circle cx="80" cy="55" r="6" fill="#f59e0b"/>
+  <circle cx="100" cy="55" r="6" fill="#10b981"/>
+  
+  <text x="130" y="60" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="bold">PCEPForge Pro v1.0.0 — Stateful PCE &amp; SR-TE Studio</text>
+  <rect x="980" y="42" width="165" height="26" rx="4" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" stroke-width="1"/>
+  <text x="992" y="59" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold">ZERO-TRUST SECURE</text>
+
+  <!-- Left Column: Inputs & Preset -->
+  <rect x="30" y="105" width="400" height="565" rx="8" fill="url(#cardGrad)" stroke="#1c274c" stroke-width="1"/>
+  <text x="50" y="135" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">Industry Architecture Preset</text>
+  <rect x="50" y="150" width="360" height="34" rx="4" fill="#070b1c" stroke="#10b981" stroke-width="1"/>
+  <text x="65" y="172" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">Tier-1 Service Provider 400G Backbone (Stateful SR-TE) [Grade A+]</text>
+
+  <text x="50" y="215" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">PCC Node &amp; Controller Configuration</text>
+  <rect x="50" y="230" width="170" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="60" y="250" fill="#94a3b8" font-family="monospace" font-size="11">NYC-CR-01</text>
+  
+  <rect x="235" y="230" width="175" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="245" y="250" fill="#94a3b8" font-family="monospace" font-size="11">PCC IP: 198.51.100.1</text>
+
+  <rect x="50" y="275" width="170" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="60" y="295" fill="#818cf8" font-family="monospace" font-size="11">PCE: 198.51.100.10</text>
+
+  <rect x="235" y="275" width="175" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="245" y="295" fill="#34d399" font-family="monospace" font-size="11">RFC 8253 TLS (Port 4189)</text>
+
+  <text x="50" y="340" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">Stateful SR-TE &amp; Diversity Constraints</text>
+  <rect x="50" y="355" width="170" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="60" y="375" fill="#cbd5e1" font-family="monospace" font-size="11">Primary: 1200 km</text>
+
+  <rect x="235" y="355" width="175" height="30" rx="4" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="245" y="375" fill="#cbd5e1" font-family="monospace" font-size="11">Secondary: 1450 km</text>
+
+  <rect x="50" y="405" width="360" height="120" rx="6" fill="#080d22" stroke="#1c274c" stroke-width="1"/>
+  <text x="70" y="430" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12">✓ Stateful LSP Delegation (D-bit=1)</text>
+  <text x="70" y="455" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12">✓ Zero Shared Nodes &amp; Zero Shared SRLGs</text>
+  <text x="70" y="480" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12">✓ Local Fallback TI-LFA Active (Fail-Closed)</text>
+  <text x="70" y="505" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12">✓ Incremental DB-Version Sync (RFC 8232)</text>
+
+  <!-- Right Column: Metrics, Audit, Wireframe & Synthesis -->
+  <!-- Top Metrics -->
+  <rect x="450" y="105" width="720" height="85" rx="8" fill="url(#cardGrad)" stroke="#1c274c" stroke-width="1"/>
+  <rect x="470" y="120" width="150" height="55" rx="6" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="545" y="145" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="18" font-weight="bold">5.88 ms</text>
+  <text x="545" y="162" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">PRIMARY DELAY</text>
+
+  <rect x="640" y="120" width="150" height="55" rx="6" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="715" y="145" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="18" font-weight="bold">7.11 ms</text>
+  <text x="715" y="162" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">SECONDARY DELAY</text>
+
+  <rect x="810" y="120" width="170" height="55" rx="6" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="895" y="145" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="18" font-weight="bold">1.23 ms</text>
+  <text x="895" y="162" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">LATENCY SKEW</text>
+
+  <rect x="1000" y="120" width="150" height="55" rx="6" fill="#070b1c" stroke="#1c274c" stroke-width="1"/>
+  <text x="1075" y="145" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="18" font-weight="bold">400 Gbps</text>
+  <text x="1075" y="162" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">BANDWIDTH CAPACITY</text>
+
+  <!-- 10-Point Zero-Trust Audit Banner -->
+  <rect x="450" y="205" width="720" height="85" rx="8" fill="linear-gradient(135deg, #0e1538, #131c4b)" stroke="#273773" stroke-width="1"/>
+  <circle cx="500" cy="247" r="28" fill="url(#badgeGrad)"/>
+  <text x="500" y="256" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="24" font-weight="bold">A+</text>
+  <text x="550" y="240" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold">Tier-1 Carrier Zero-Trust PCEP Score: 100 / 100 (Grade A+)</text>
+  <text x="550" y="260" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">10/10 Pillars Passed &bull; TLS Mutual Auth &bull; Geo-Redundancy &bull; Strict SRLG Diversity</text>
+
+  <!-- PCEP Binary Dissection Breakdown -->
+  <rect x="450" y="305" width="720" height="155" rx="8" fill="url(#cardGrad)" stroke="#1c274c" stroke-width="1"/>
+  <text x="470" y="330" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold">RFC 8231 Stateful PCEP Wireframe &amp; Wireshark Hex Dump</text>
+  
+  <rect x="470" y="342" width="140" height="28" rx="4" fill="rgba(99, 102, 241, 0.25)" stroke="#6366f1" stroke-width="1"/>
+  <text x="540" y="361" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="11">20 0A 00 40 (PCRpt)</text>
+
+  <rect x="618" y="342" width="140" height="28" rx="4" fill="rgba(6, 182, 212, 0.25)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="688" y="361" text-anchor="middle" fill="#a5f3fc" font-family="monospace" font-size="11">SRP (Class 33: 12B)</text>
+
+  <rect x="766" y="342" width="130" height="28" rx="4" fill="rgba(16, 185, 129, 0.25)" stroke="#10b981" stroke-width="1"/>
+  <text x="831" y="361" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="11">LSP (Class 32: 8B)</text>
+
+  <rect x="904" y="342" width="245" height="28" rx="4" fill="rgba(245, 158, 11, 0.25)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1026" y="361" text-anchor="middle" fill="#fde68a" font-family="monospace" font-size="11">SR-ERO (Class 7: 40B, 3 Hops)</text>
+
+  <!-- Wireshark Dump Box -->
+  <rect x="470" y="380" width="680" height="65" rx="4" fill="#040714" stroke="#1c274c" stroke-width="1"/>
+  <text x="485" y="402" fill="#cbd5e1" font-family="monospace" font-size="11">0000  20 0a 00 40 21 10 00 0c  00 00 00 00 00 00 13 89  | ..@!...........|</text>
+  <text x="485" y="422" fill="#94a3b8" font-family="monospace" font-size="11">0010  20 10 00 08 00 06 5d 30  07 10 00 28 24 0c 11 08  | .....]0...($...|</text>
+
+  <!-- Multi-Vendor Synthesizer -->
+  <rect x="450" y="475" width="720" height="195" rx="8" fill="url(#cardGrad)" stroke="#1c274c" stroke-width="1"/>
+  <text x="470" y="500" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold">Multi-Vendor PCEP Synthesizer (Cisco IOS-XR / Arista / Juniper / Nokia / Prometheus)</text>
+  
+  <rect x="470" y="515" width="680" height="140" rx="4" fill="#040714" stroke="#1c274c" stroke-width="1"/>
+  <text x="485" y="535" fill="#818cf8" font-family="monospace" font-size="11">! Cisco IOS-XR SR-TE PCC Configuration [NYC-CR-01]</text>
+  <text x="485" y="552" fill="#94a3b8" font-family="monospace" font-size="11">segment-routing traffic-eng pcc</text>
+  <text x="485" y="569" fill="#94a3b8" font-family="monospace" font-size="11"> pce address ipv4 198.51.100.10 precedence 10 tls</text>
+  <text x="485" y="586" fill="#94a3b8" font-family="monospace" font-size="11"> pce address ipv4 198.51.100.11 precedence 20 tls</text>
+  <text x="485" y="603" fill="#34d399" font-family="monospace" font-size="11"> timers keepalive 30 dead-timer 120 delegation-timeout 60</text>
+  <text x="485" y="620" fill="#818cf8" font-family="monospace" font-size="11"> stateful-client instantiation redundancy</text>
+</svg>
